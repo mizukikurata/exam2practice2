@@ -24,11 +24,8 @@ library(tidyverse)
 library(WDI)
 ```
 
-```{r, fig.align="center", echo=FALSE}
-knitr::include_graphics("33268350_p0_master1200.jpg",dpi=200)
-```
 
-![depressed blob](33268350_p0_master1200.jpg)
+
 ```{r}
 population_data = WDI(country = "all",
                       indicator = c("SP.POP.TOTL"),
