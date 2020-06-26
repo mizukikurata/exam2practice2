@@ -1,0 +1,37 @@
+---
+title: "Exam2Practice"
+author: "Kurata"
+date: "6/26/2020"
+output: pdf_document
+toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## HEADER
+
+Embedded link [here](http://rmarkdown.rstudio.com).
+
+```{r include = FALSE}
+setwd("C:/Users/mizup/OneDrive/GOVf355M/EXAM2")
+library(rio)
+ps2020 = import("fatal-police-shootings-data.csv")
+library(ggplot2)
+library(lubridate)
+library(tidyverse)
+library(WDI)
+```
+
+```{r, fig.align="center", echo=FALSE}
+knitr::include_graphics("33268350_p0_master1200.jpg",dpi=200)
+```
+
+![depressed blob](33268350_p0_master1200.jpg)
+```{r}
+population_data = WDI(country = "all",
+                      indicator = c("SP.POP.TOTL"),
+                      start = 2015, end = 2015, extra = FALSE, cache = NULL)
+```
+
